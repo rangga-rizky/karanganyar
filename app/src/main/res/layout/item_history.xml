@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp">
+
+        <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/txtTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif"
+            android:textColor="#f7524f"
+            android:text="12"
+
+            />
+
+        <TextView
+            android:id="@+id/txtBulan"
+            app:layout_constraintEnd_toEndOf="@id/txtTanggal"
+            app:layout_constraintTop_toBottomOf="@+id/txtTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="#999999"
+            android:text="Des"
+            />
+
+        <TextView
+            android:id="@+id/txtTahun"
+            app:layout_constraintEnd_toEndOf="@id/txtTanggal"
+            app:layout_constraintTop_toBottomOf="@+id/txtBulan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="#999999"
+            android:text="2017"
+            />
+
+        <TextView
+            android:paddingTop="3dp"
+            app:layout_constraintLeft_toRightOf="@+id/txtTanggal"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/txtAlamat"
+            android:layout_marginLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textColor="#222222"
+            android:lineSpacingExtra="4sp"
+            android:text="Jl. Simpang Darmo Permai Utara No. 14, Sambikareb, Karanganyar."
+            android:layout_marginStart="30dp" />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/txtAlamat"
+            app:layout_constraintStart_toStartOf="@id/txtAlamat"
+            android:id="@+id/kerugian"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:text="Kerugian:"
+            />
+
+        <TextView
+            android:id="@+id/txtKerugian"
+            app:layout_constraintTop_toBottomOf="@+id/kerugian"
+            app:layout_constraintStart_toStartOf="@id/txtAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="#222222"
+            android:text="14 Miliyar"
+            />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/main_layout"
+        android:background="@color/grey"
+        />
+
+
+</RelativeLayout>

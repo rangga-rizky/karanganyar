@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/blue"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/btnGO"
+        android:layout_height="match_parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@+id/view_pager"
+        android:gravity="center"
+        android:layout_alignStart="@+id/btnGO"
+        android:layout_marginBottom="10dp"
+        android:layout_height="@dimen/dots_height"
+        android:layout_above="@+id/btnGO"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@+id/btnGO"></LinearLayout>
+
+    <Button
+        android:id="@+id/btnGO"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="29dp"
+        android:background="@drawable/primary_rounded_button"
+        android:text="Lets' Go"
+        android:textColor="@color/blue" />
+
+
+
+</RelativeLayout>

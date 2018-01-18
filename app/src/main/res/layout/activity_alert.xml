@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.example.ranggarizky.karanganyar.alertpage.AlertActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparant_black">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="56dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_alert_red_zone"/>
+
+            <TextView
+                android:id="@+id/berbahaya"
+                android:layout_marginTop="29dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="#dee0202c"
+                android:lineSpacingExtra="8sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                android:text="Berbahaya!"
+                />
+
+            <TextView
+                android:id="@+id/warning"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/berbahaya"
+                android:layout_width="200dp"
+                android:layout_marginTop="14dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:textColor="#999999"
+                android:lineSpacingExtra="7sp"
+                android:gravity="center_horizontal"
+                android:text="1 Km lagi anda akan melalui dareah rawan longsor"
+                />
+
+            <Button
+                android:id="@+id/btnRute"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/warning"
+                android:background="@drawable/grey_border"
+                android:layout_width="wrap_content"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"
+                android:text="CEK ALTERNATIF RUTE"/>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+    </RelativeLayout>
+

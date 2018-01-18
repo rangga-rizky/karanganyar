@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:background="@color/white"
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            android:fitsSystemWindows="true">
+
+            <android.support.v4.view.ViewPager
+                android:layout_marginTop="20dp"
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="bottom"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingEnd="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingStart="30dp"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.ranggarizky.karanganyar.detail_wisata_page.DetailWisataActivity"
+        tools:showIn="@layout/activity_detail_wisata">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ProgressBar
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/main_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="16dp"
+            android:paddingRight="38dp"
+            android:paddingLeft="38dp"
+            android:paddingBottom="16dp">
+
+            <RelativeLayout
+                android:id="@+id/btnDirection"
+                android:padding="10dp"
+                app:layout_constraintRight_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle">
+
+                <ImageView
+                    android:id="@+id/imgDirection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_direction"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/imgDirection"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GO"/>
+
+
+            </RelativeLayout>
+
+
+        <TextView
+                android:id="@+id/txtName"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/btnDirection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                />
+
+            <TextView
+                android:id="@+id/txtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.3"
+                android:textSize="14sp"
+                android:textColor="@color/orange"
+                app:layout_constraintTop_toBottomOf="@+id/txtName"
+                />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_marginTop="1dp"
+                app:layout_constraintLeft_toRightOf="@+id/txtRating"
+                app:layout_constraintTop_toBottomOf="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                app:mrb_secondaryProgressTint="@color/orange"
+                android:progressTint="@color/orange"
+                android:rating="2.3"
+                style="@style/Widget.MaterialRatingBar.RatingBar.Small" />
+
+
+            <TextView
+                android:id="@+id/alamat"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:text="Alamat:"
+                />
+
+            <TextView
+                android:id="@+id/txtAlamat"
+                app:layout_constraintTop_toBottomOf="@+id/alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                 />
+
+            <TextView
+                android:id="@+id/telepon"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtAlamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:text="Telepon:"
+                />
+
+            <TextView
+                android:id="@+id/txtTelepon"
+                app:layout_constraintTop_toBottomOf="@+id/telepon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                />
+
+            <TextView
+                android:id="@+id/opening"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTelepon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:text="Jam Buka:"
+                />
+
+            <TextView
+                android:id="@+id/txtSenin"
+                app:layout_constraintTop_toBottomOf="@+id/opening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/txtSelasa"
+                app:layout_constraintTop_toBottomOf="@+id/txtSenin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/txtRabu"
+                app:layout_constraintTop_toBottomOf="@+id/txtSelasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/txtKamis"
+                app:layout_constraintTop_toBottomOf="@+id/txtRabu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/txtJumat"
+                app:layout_constraintTop_toBottomOf="@+id/txtKamis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/txtSabtu"
+                app:layout_constraintTop_toBottomOf="@+id/txtJumat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/txtMinggu"
+                app:layout_constraintTop_toBottomOf="@+id/txtSabtu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/provinsi"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtMinggu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:text="Provinsi:"
+                />
+
+            <TextView
+                android:id="@+id/txtProvinsi"
+                app:layout_constraintTop_toBottomOf="@+id/provinsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textColor="#333333"
+                android:text=""
+                />
+
+        </android.support.constraint.ConstraintLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

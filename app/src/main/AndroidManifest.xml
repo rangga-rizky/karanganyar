@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ranggarizky.karanganyar">
+    package="com.example.apps.karanganyar">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <service android:name=".alertpage.GeofenceTrasitionService" />
+        <service android:name="com.example.apps.karanganyar.alertpage.GeofenceTrasitionService" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -22,15 +22,15 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_key" />
 
-        <activity android:name=".MainActivity" />
-        <activity android:name=".firstpage.FirstActivity" />
+        <activity android:name="com.example.apps.karanganyar.MainActivity" />
+        <activity android:name="com.example.apps.karanganyar.firstpage.FirstActivity" />
         <activity
-            android:name=".detail_wisata_page.DetailWisataActivity"
+            android:name="com.example.apps.karanganyar.detail_wisata_page.DetailWisataActivity"
             android:label="@string/title_activity_detail_wisata"
             android:theme="@style/AppTheme" />
-        <activity android:name=".map_page.MapActivity" />
-        <activity android:name=".historypage.HistoryActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name="com.example.apps.karanganyar.map_page.MapActivity" />
+        <activity android:name="com.example.apps.karanganyar.historypage.HistoryActivity" />
+        <activity android:name="com.example.apps.karanganyar.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,10 +38,10 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".alertpage.RouteActivity" >
+        <activity android:name="com.example.apps.karanganyar.alertpage.RouteActivity" >
 
         </activity>
-        <activity android:name=".alertpage.AlertActivity"
+        <activity android:name="com.example.apps.karanganyar.alertpage.AlertActivity"
             android:theme="@style/Theme.Transparents">
 
 

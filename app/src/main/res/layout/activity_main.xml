@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.example.ranggarizky.karanganyar.MainActivity">
+    tools:context="com.example.apps.karanganyar.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar_layout"

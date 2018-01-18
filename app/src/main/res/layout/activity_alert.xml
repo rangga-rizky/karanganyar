@@ -3,7 +3,7 @@
 <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:context="com.example.ranggarizky.karanganyar.alertpage.AlertActivity"
+    tools:context="com.example.apps.karanganyar.alertpage.AlertActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/transparant_black">

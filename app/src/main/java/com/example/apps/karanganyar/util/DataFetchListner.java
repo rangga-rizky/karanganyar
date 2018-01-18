@@ -10,6 +10,5 @@ public interface DataFetchListner {
     // void onDeliverAllData(List<DataModel> dataModels);
 
     void onDeliverData(Result dataModel);
-
     void onHideDialog();
 }

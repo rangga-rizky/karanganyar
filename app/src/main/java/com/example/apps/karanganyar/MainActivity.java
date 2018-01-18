@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements DataFetchListner,
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         db = new DBHandler(this);
 
-
+        editSearch = (EditText) searchView.findViewById(R.id.search_src_text);
         //setting searchview agar tidak memunculkan keyboard saat awal
         searchView.setActivated(true);
         searchView.setQueryHint("Ayo Liburan!");
@@ -140,7 +140,6 @@ public class MainActivity extends AppCompatActivity implements DataFetchListner,
         });
 
         setLoc();
-        loadRedZone();
     }
 
     //load data redzones dari SERVER
@@ -372,6 +371,8 @@ public class MainActivity extends AppCompatActivity implements DataFetchListner,
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
 
         }
+
+        loadRedZone();
 
         //cek jika pertama maka load dari google places API jika tidak load dari database
         if (!sessionManager.isFirstime()) {

@@ -9,7 +9,7 @@
     android:layout_marginTop="56dp"
     app:behavior_hideable="true"
     app:behavior_peekHeight="0dp"
-    app:layout_behavior="com.example.ranggarizky.karanganyar.util.UserLockBottomSheetBehavior">
+    app:layout_behavior="com.example.apps.karanganyar.util.UserLockBottomSheetBehavior">
 
     <ProgressBar
         android:layout_width="wrap_content"

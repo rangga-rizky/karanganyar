@@ -20,7 +20,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_key" />
+            android:value="@string/google_key3" />
 
         <activity android:name="com.example.apps.karanganyar.MainActivity" />
         <activity android:name="com.example.apps.karanganyar.firstpage.FirstActivity" />

@@ -133,7 +133,7 @@ public class DetailWisataActivity extends AppCompatActivity {
     private void settingVIewPager(List<Photo> images){
         mCardAdapter = new CardPagerAdapter(this);
         for(int i = 0 ;i < images.size();i++){
-            String key = getResources().getString(R.string.google_key);
+            String key = getResources().getString(R.string.google_key2);
             String fotoRequest = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+
                     images.get(i).getPhotoReference()+"&key="+key;
             mCardAdapter.addCardItem(fotoRequest);
@@ -150,7 +150,7 @@ public class DetailWisataActivity extends AppCompatActivity {
     private void loadData(String id) {
         progressbar.setVisibility(View.VISIBLE);
         API apiService = API.client.create(API.class);
-        String key = getResources().getString(R.string.google_key);
+        String key = getResources().getString(R.string.google_key2);
         Call<GooglePlaceSingleRespond> call = apiService.getPlacebyId(id,"id",key);
 
         //proses call

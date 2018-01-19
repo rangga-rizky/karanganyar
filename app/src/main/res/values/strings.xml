@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Karanganyar</string>
     <string name="title_activity_detail_wisata">DetailWisataActivity</string>
-    <string name="google_key">AIzaSyCfMmQr6Ahd7VdIVvuGRrl5KTZfMc9vtZI</string>
+    <string name="google_key">AIzaSyBDneSeuchCaSZ5odgUiGZLK-LOFHEjVXQ</string>
+    <string name="google_key2">AIzaSyDnAtsomOLQ6z8VtygcM2I-5hwcasPOM_Y</string>
+    <string name="google_key3">AIzaSyC38g2CKGVh5XiGHM-tUskq2Hh-jwgXwVs</string>
     <string name="weather_key">91114a525c887f694f9983735d367646</string>
     <string name="danger_warning">Jangan pakai rute ini, sangat berbahaya</string>
     <string name="warning">Hati - hati, ada daerah rawan longsor</string>

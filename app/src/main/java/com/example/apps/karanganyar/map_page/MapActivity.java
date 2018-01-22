@@ -214,6 +214,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         // mGoogleMap.setInfoWindowAdapter(new MyInfoWindowAdapter());
        // mGoogleMap.getUiSettings().setRotateGesturesEnabled(false);
         mGoogleMap.getUiSettings().setMapToolbarEnabled(true);
+        mGoogleMap.setPadding(0, 50, 0, 0);
         //mGoogleMap.getUiSettings().setZoomControlsEnabled(true);
         //mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
 
@@ -519,10 +520,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 builder.include(marker.getPosition());
             }
 
-
             //cek apakah aman atau tidak
             if(hasil.getIsDangerous().size()> 0){
-                if(!hasil.getIsDangerous().contains(false)) {
+                if(!hasil.getIsDangerous().contains(false) && (cuaca.equals("Rain"))) {
                     openAllRedDialog();
                     imgWarning.setImageDrawable(getResources().getDrawable(R.drawable.ic_danger_route));
                     txtWarning.setText("semua rute berbahaya");
@@ -536,13 +536,15 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
             }
 
-            //camera untuk mao
+            //camera untuk map
             LatLngBounds bounds = builder.build();
             int padding = 55; // offset from edges of the map in pixels
             CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
             mGoogleMap.animateCamera(cu);
             main_layout.setVisibility(View.VISIBLE);
             warningLayout.setVisibility(View.VISIBLE);
+
+            //padding untuk atur letak tombol direction dan mylocation
             ViewTreeObserver viewTreeObserver = main_layout.getViewTreeObserver();
             if (viewTreeObserver.isAlive()) {
                 viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -550,8 +552,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     public void onGlobalLayout() {
                         main_layout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
-                        Log.e("ayam",String.valueOf(main_layout.getMeasuredHeight()));
-                        mGoogleMap.setPadding(35, 20, 0, main_layout.getMeasuredHeight()+160);
+                        mGoogleMap.setPadding(35, 50, 0, main_layout.getMeasuredHeight()+160);
                     }
                 });
             }

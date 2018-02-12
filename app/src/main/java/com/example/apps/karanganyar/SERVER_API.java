@@ -20,7 +20,7 @@ import retrofit2.http.GET;
 //setting retrofit untuk server sendiri
 public interface SERVER_API {
     //variable base URL
-    public static String baseURL = "http://prayuga.com/karanganyar/api/";
+    public static String baseURL = "http://karanganyar.zakariayatins.com/api/";
 
     Gson gson = new GsonBuilder()
             .setLenient()
